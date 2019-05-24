@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dillancobb.currencyconverter.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtAmount"
+        android:hint="Dollar Amount" />
+
+    <TextView
+        android:text="Insert a dollar amount above and click one of the buttons below to get that amount of dollars in that currency. This goes off of current rates as of 5/23/19."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/txtAmount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/dollar"
+        android:id="@+id/imageView3"
+        android:scaleType="fitStart"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
+
+    <Button
+        android:text="JPY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnJpy"
+        android:onClick="convertJPY"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="EUR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEur"
+        android:onClick="convertEUR"
+        android:layout_below="@+id/imageView3"
+        android:layout_toRightOf="@+id/btnJpy"
+        android:layout_toEndOf="@+id/btnJpy"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="GBP"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGbp"
+        android:onClick="convertGBP"
+        android:layout_below="@+id/imageView3"
+        android:layout_toRightOf="@+id/btnEur"
+        android:layout_toEndOf="@+id/btnEur"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="CAD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCad"
+        android:onClick="convertCAD"
+        android:layout_below="@+id/btnJpy"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="CHF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCnf"
+        android:onClick="convertCHF"
+        android:layout_below="@+id/btnEur"
+        android:layout_toRightOf="@+id/btnCad"
+        android:layout_toEndOf="@+id/btnCad"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="CNH"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCnh"
+        android:onClick="convertCNH"
+        android:layout_below="@+id/btnGbp"
+        android:layout_toRightOf="@+id/btnEur"
+        android:layout_toEndOf="@+id/btnEur"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="AUD"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAud"
+        android:onClick="convertAUD"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_toRightOf="@+id/btnGbp"
+        android:layout_toEndOf="@+id/btnGbp"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="SEK"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSek"
+        android:onClick="convertSEK"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/btnAud"
+        android:layout_toRightOf="@+id/btnCnh"
+        android:layout_toEndOf="@+id/btnCnh"
+        android:textAlignment="center" />
+
+</RelativeLayout>
